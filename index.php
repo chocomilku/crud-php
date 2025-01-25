@@ -69,13 +69,31 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
 					echo "<td>" . $row['sex'] . "</td>";
 					echo "<td>" . $row['address'] . "</td>";
 					echo "<td>" . $row['email'] . "</td>";
-					echo "<td><a href=\"edit.php?id=$row[id]\">Edit</a> | 
-				<a href=\"delete.php?id=$row[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td></tr>";
+					echo "<td><div class=\"\">
+			<button type=\"button\" onclick='editRecord($row[id])' class=\"btn btn-primary\">
+				<i class=\"bi bi-pencil-square\"></i>
+			</button>
+			<button type=\"button\" onclick=\"deleteRecord($row[id])\" class=\"btn btn-danger\">
+				<i class=\"bi bi-trash3\"></i>
+			</button>
+		</div>";
+					echo "</td></tr>";
 				}
 				?>
 			</tbody>
 		</table>
 	</main>
+	<script type="text/javascript">
+		function deleteRecord(id) {
+			if (confirm(`Are you sure you want to delete ID: ${id}?`)) {
+				return location.href = `delete.php?id=${id}`
+			}
+		}
+
+		function editRecord(id) {
+			return location.href = `edit.php?id=${id}`
+		}
+	</script>
 </body>
 
 </html>

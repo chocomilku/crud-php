@@ -4,7 +4,7 @@ USE crud;
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `student_id` varchar(15) NOT NULL,
+  `student_id` varchar(15) NOT NULL UNIQUE,
   `last_name` varchar(100) NOT NULL,
   `first_name` varchar(100) NOT NULL,
   `age` int(3) NOT NULL,
