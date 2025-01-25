@@ -1,0 +1,32 @@
+# Ignore composer dependencies
+/vendor/
+
+# Ignore environment variables
+.env
+
+# Ignore IDE and editor specific files
+.idea/
+.vscode/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore PHPUnit test results
+phpunit.xml
+phpunit.xml.dist
+
+# Ignore coverage reports
+coverage/
+
+# Ignore cache and session files
+cache/
+sessions/
+
+# Ignore other common files
+*.bak
+*.swp
+*.tmp
