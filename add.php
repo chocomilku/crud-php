@@ -37,29 +37,68 @@
 			</ol>
 		</nav>
 
+		<hr>
 
+		<form action="addAction.php" method="post" name="add"
+			class="container d-flex flex-column align-items-center gap-3">
+
+			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
+				style="max-width:var(--bs-breakpoint-sm)">
+				<label for="studentId" class="form-label fs-5">Student ID</label>
+				<input type="text" name="student_id" id="studentId" class="form-control" required aria-required="true">
+			</div>
+
+			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
+				style="max-width:var(--bs-breakpoint-sm)">
+				<label for="lastName" class="form-label fs-5">Last Name</label>
+				<input type="text" name="last_name" id="lastName" class="form-control" required aria-required="true">
+			</div>
+
+			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
+				style="max-width:var(--bs-breakpoint-sm)">
+				<label for="firstName" class="form-label fs-5">First Name</label>
+				<input type="text" name="first_name" id="firstName" class="form-control" required aria-required="true">
+			</div>
+
+			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
+				style="max-width:var(--bs-breakpoint-sm)">
+				<label for="age" class="form-label fs-5">Age</label>
+				<input type="number" name="age" id="age" class="form-control" required aria-required="true">
+			</div>
+
+			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
+				style="max-width:var(--bs-breakpoint-sm)">
+				<label for="sex" class="form-check-label fs-5">Sex</label>
+				<div class="form-check">
+					<input type="radio" name="sex" id="sexM" value="MALE" class="form-check-input" required
+						aria-required="true">
+					<label for="sexM" class="form-check-label">Male</label>
+				</div>
+				<div class="form-check">
+					<input type="radio" name="sex" id="sexF" value="FEMALE" class="form-check-input" required
+						aria-required="true">
+					<label for="sexF" class="form-check-label">Female</label>
+				</div>
+			</div>
+
+			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
+				style="max-width:var(--bs-breakpoint-sm)">
+				<label for="address" class="form-label fs-5">Address</label>
+				<input type="text" name="address" id="address" class="form-control" required aria-required="true">
+			</div>
+
+			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
+				style="max-width:var(--bs-breakpoint-sm)">
+				<label for="email" class="form-label fs-5">Email Address</label>
+				<input type="email" name="email" id="email" class="form-control" required aria-required="true">
+			</div>
+
+			<div class="d-flex flex-row gap-4">
+				<button type="button" class="btn btn-danger" onclick="location.href = 'index.php'">Cancel</button>
+				<button type="submit" class="btn btn-success">Submit</button>
+			</div>
+		</form>
 	</main>
-
-	<form action="addAction.php" method="post" name="add">
-		<table width="25%" border="0">
-			<tr>
-				<td>Name</td>
-				<td><input type="text" name="name"></td>
-			</tr>
-			<tr>
-				<td>Age</td>
-				<td><input type="text" name="age"></td>
-			</tr>
-			<tr>
-				<td>Email</td>
-				<td><input type="text" name="email"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" name="submit" value="Add"></td>
-			</tr>
-		</table>
-	</form>
 </body>
 
 </html>
