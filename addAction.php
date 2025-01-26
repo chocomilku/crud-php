@@ -21,7 +21,7 @@
 		<h1 class="py-2">Add Data</h1>
 		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
 			<ol class="breadcrumb text-secondary">
-				<li class="breadcrumb-item">Polytechinic University of the Philippines</li>
+				<li class="breadcrumb-item">Polytechnic University of the Philippines</li>
 				<li class="breadcrumb-item">Institute of Technology</li>
 				<li class="breadcrumb-item">Diploma in Information Technology</li>
 				<li class="breadcrumb-item active text-primary-emphasis" aria-current="page">1-4 <span
