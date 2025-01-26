@@ -95,7 +95,7 @@
 			echo "<div class='alert alert-danger' role='alert'> Unknown Error </div>";
 			echo "<div class='d-flex flex-row gap-4'>
 				<button type='button' class='btn btn-info' onclick='location.href=\"index.php\"'>Go to Home</button>
-				<button type='submit' class='btn btn-info' onclick='location.href=\"add.php\"'>Go to Add</button>
+				<button type='submit' class='btn btn-info' onclick='history.back()'>Go Back</button>
 			</div>";
 		}
 		?>

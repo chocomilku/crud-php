@@ -128,7 +128,7 @@ $email = $resultData['email'];
 
 			<div class="d-flex flex-row gap-4">
 				<button type="button" class="btn btn-danger" onclick="location.href = 'index.php'">Cancel</button>
-				<button type="submit" class="btn btn-success" name="submit">Submit</button>
+				<button type="submit" class="btn btn-success" name="update">Submit</button>
 			</div>
 
 		</form>
