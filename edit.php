@@ -67,35 +67,35 @@ $email = $resultData['email'];
 				style="max-width:var(--bs-breakpoint-sm)">
 				<label for="id" class="form-label fs-5">ID</label>
 				<!-- disabled doesnt include it when submitting. second id input with hidden is set to include id at submission -->
-				<input type="number" name="id" id="id" class="form-control" readonly disabled value=<?php echo $id ?>>
-				<input type="number" name="id" id="id" hidden aria-hidden="true" value=<?php echo $id ?>>
+				<input type="number" name="id" id="id" class="form-control" readonly disabled value="<?php echo $id ?>">
+				<input type="number" name="id" id="id" hidden aria-hidden="true" value="<?php echo $id ?>">
 			</div>
 
 			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
 				style="max-width:var(--bs-breakpoint-sm)">
 				<label for="studentId" class="form-label fs-5">Student ID</label>
-				<input type="text" name="student_id" id="studentId" value=<?php echo $studentId ?> class="form-control"
-					required aria-required="true">
+				<input type="text" name="student_id" id="studentId" value="<?php echo $studentId ?>"
+					class="form-control" required aria-required="true">
 			</div>
 
 			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
 				style="max-width:var(--bs-breakpoint-sm)">
 				<label for="lastName" class="form-label fs-5">Last Name</label>
-				<input type="text" name="last_name" id="lastName" value=<?php echo $lastName ?> class="form-control"
+				<input type="text" name="last_name" id="lastName" value="<?php echo $lastName ?>" class="form-control"
 					required aria-required="true">
 			</div>
 
 			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
 				style="max-width:var(--bs-breakpoint-sm)">
 				<label for="firstName" class="form-label fs-5">First Name</label>
-				<input type="text" name="first_name" id="firstName" value=<?php echo $firstName ?> class="form-control"
-					required aria-required="true">
+				<input type="text" name="first_name" id="firstName" value="<?php echo $firstName ?>"" class="
+					form-control" required aria-required="true">
 			</div>
 
 			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
 				style="max-width:var(--bs-breakpoint-sm)">
 				<label for="age" class="form-label fs-5">Age</label>
-				<input type="number" name="age" id="age" class="form-control" value=<?php echo $age ?> required
+				<input type="number" name="age" id="age" class="form-control" value="<?php echo $age ?>" required
 					aria-required="true">
 			</div>
 
@@ -115,14 +115,14 @@ $email = $resultData['email'];
 			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
 				style="max-width:var(--bs-breakpoint-sm)">
 				<label for="address" class="form-label fs-5">Address</label>
-				<input type="text" name="address" id="address" value=<?php echo $address ?> class="form-control"
+				<input type="text" name="address" id="address" value="<?php echo $address ?>" class="form-control"
 					required aria-required="true">
 			</div>
 
 			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
 				style="max-width:var(--bs-breakpoint-sm)">
 				<label for="email" class="form-label fs-5">Email Address</label>
-				<input type="email" name="email" id="email" value=<?php echo $email ?> class="form-control" required
+				<input type="email" name="email" id="email" value="<?php echo $email ?>" class="form-control" required
 					aria-required="true">
 			</div>
 

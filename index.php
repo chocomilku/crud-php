@@ -2,10 +2,21 @@
 // Include the database connection file
 require_once("dbConnection.php");
 
-// Fetch data in descending order (lastest entry first)
-$result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
+// count
 $all_data = mysqli_query($mysqli, "SELECT COUNT(*) FROM users");
 $count = mysqli_fetch_row($all_data)[0];
+
+$limit = 10;
+$offset = 0;
+$total_pages = ceil($count / $limit);
+
+if (isset($_GET['page'])) {
+	$page = mysqli_real_escape_string($mysqli, $_GET['page']);
+	$page <= 0 ? $offset = 0 : $offset = $limit * ($page - 1);
+}
+
+// Fetch data in descending order (lastest entry first)
+$result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC LIMIT $limit OFFSET $offset");
 ?>
 
 <html>
