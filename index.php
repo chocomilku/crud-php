@@ -9,10 +9,17 @@ $count = mysqli_fetch_row($all_data)[0];
 $limit = 10;
 $offset = 0;
 $total_pages = ceil($count / $limit);
+$current_page = 1;
 
 if (isset($_GET['page'])) {
 	$page = mysqli_real_escape_string($mysqli, $_GET['page']);
-	$page <= 0 ? $offset = 0 : $offset = $limit * ($page - 1);
+	if ($page <= 0) {
+		$offset = 0;
+		$current_page = 1;
+	} else {
+		$offset = $limit * ($page - 1);
+		$current_page = $page;
+	}
 }
 
 // Fetch data in descending order (lastest entry first)
@@ -104,10 +111,34 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC LIMIT $lim
 			</button>
 		</div>";
 					echo "</td></tr>";
-				}
-				?>
+				} ?>
 			</tbody>
 		</table>
+		<div class="d-flex align-items-center justify-content-center">
+			<nav aria-label="Page navigation">
+				<ul class="pagination">
+					<li class="page-item <?php echo ($current_page - 1 <= 0) ? "disabled" : "" ?>">
+						<a class="page-link" href="index.php?page=<?php echo $current_page - 1 ?>">Previous</a>
+					</li>
+
+					<?php
+					for ($i = 1; $i <= $total_pages; $i++) {
+						echo "<li class='page-item'>";
+						if ($i == $current_page) {
+							echo "<a class='page-link active' href='index.php?page=$i'>$i</a>";
+						} else {
+							echo "<a class='page-link' href='index.php?page=$i'>$i</a>";
+						}
+						echo "</li>";
+					} ?>
+
+					<li class="page-item <?php echo ($current_page + 1 > $total_pages) ? "disabled" : "" ?>">
+						<a class="page-link" href="index.php?page=<?php echo $current_page + 1 ?>">Next</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
 	</main>
 	<script type="text/javascript">
 		function deleteRecord(id) {
