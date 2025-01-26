@@ -65,6 +65,14 @@ $email = $resultData['email'];
 			class="container d-flex flex-column align-items-center gap-3">
 			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
 				style="max-width:var(--bs-breakpoint-sm)">
+				<label for="id" class="form-label fs-5">ID</label>
+				<!-- disabled doesnt include it when submitting. second id input with hidden is set to include id at submission -->
+				<input type="number" name="id" id="id" class="form-control" readonly disabled value=<?php echo $id ?>>
+				<input type="number" name="id" id="id" hidden aria-hidden="true" value=<?php echo $id ?>>
+			</div>
+
+			<div class="container d-flex flex-column bg-body-tertiary p-3 rounded border border-secondary-subtle"
+				style="max-width:var(--bs-breakpoint-sm)">
 				<label for="studentId" class="form-label fs-5">Student ID</label>
 				<input type="text" name="student_id" id="studentId" value=<?php echo $studentId ?> class="form-control"
 					required aria-required="true">
