@@ -4,6 +4,8 @@ require_once("dbConnection.php");
 
 // Fetch data in descending order (lastest entry first)
 $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
+$all_data = mysqli_query($mysqli, "SELECT COUNT(*) FROM users");
+$count = mysqli_fetch_row($all_data)[0];
 ?>
 
 <html>
@@ -46,10 +48,14 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
 				</li>
 			</ol>
 		</nav>
-		<div class="py-2">
+		<div class="d-flex flex-row align-items-end justify-content-between py-2">
 			<button type="button" onclick="location.href = 'add.php'" class="btn btn-primary">
 				<i class="bi bi-plus"></i> Add New Student
 			</button>
+			<strong>
+				Total Student Count: <?php echo $count ?>
+			</strong>
+
 		</div>
 		<table class="table table-striped table-hover">
 			<thead>
