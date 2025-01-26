@@ -102,7 +102,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC LIMIT $lim
 					echo "<td>" . $row['sex'] . "</td>";
 					echo "<td>" . $row['address'] . "</td>";
 					echo "<td>" . $row['email'] . "</td>";
-					echo "<td><div class=\"\">
+					echo "<td><div>
 			<button type=\"button\" onclick='editRecord($row[id])' class=\"btn btn-primary\">
 				<i class=\"bi bi-pencil-square\"></i>
 			</button>
