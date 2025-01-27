@@ -9,5 +9,5 @@ $id = $_GET['id'];
 $result = mysqli_query($mysqli, "DELETE FROM users WHERE id = $id");
 
 // Redirect to the main display page (index.php in our case)
-echo "<script>Data deleted successfully!</script>";
-header("Location:index.php?del=$id");
+// modified code to use JS to fix error in production (something related to headers)
+echo "<script>window.location.replace('index.php?del=$id')</script>";
